@@ -222,7 +222,9 @@ namespace ZgloszeniaAppka
             _id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
             var szczegoly = new Szczegoly();
+            szczegoly.PobranID(_id);
             szczegoly.Show();
+        
         }
     }
 }

@@ -41,6 +41,9 @@ namespace ZgloszeniaAppka
 
         private void zapisz_btn_Click(object sender, EventArgs e)
         {
+            var pobierz = new PobranieDanych();
+            pobierz.UpdateObiektu(_id, tytul_tb.Text, opis_tb.Text);
+            Close();
 
         }
     }

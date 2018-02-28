@@ -71,6 +71,8 @@ namespace ZgloszeniaAppka
 
         void nowezgl_Closed(object sender, EventArgs e) => Aktualne();
 
+        void szczegoly_Closed(object sender, EventArgs e) => Aktualne();
+
         private void refresh_btn_Click(object sender, EventArgs e)
         {
             //this.zgloszeniaTableAdapter.Fill(this.bazaZgloszenDataSet.Zgloszenia);
@@ -181,6 +183,7 @@ namespace ZgloszeniaAppka
                     zgloszenia.Tytul = item.Tytul;
                     zgloszenia.Opis = item.Opis;
                     zgloszenia.DataOtworzenia = item.DataOtworzenia;
+                    zgloszenia.DataZamkniecia = item.DataZamkniecia;
                     zgloszenia.Komentarz = item.Komentarz;
                     zgloszenia.Uzytkownikid = item.Uzytkownikid;
                     listaAktualne.Add(zgloszenia);
@@ -222,9 +225,9 @@ namespace ZgloszeniaAppka
             _id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
             var szczegoly = new Szczegoly();
+            szczegoly.Closed += szczegoly_Closed;
             szczegoly.PobranID(_id);
-            szczegoly.Show();
-        
+            szczegoly.ShowDialog(this);
         }
     }
 }

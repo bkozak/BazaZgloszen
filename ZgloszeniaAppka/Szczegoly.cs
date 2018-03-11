@@ -34,7 +34,7 @@ namespace ZgloszeniaAppka
                     opis_tb.Text = element.Opis;
                     datautworzenia_tb.Text = element.DataOtworzenia;
                     datazamkniecia_tb.Text = element.DataZamkniecia;
-                    uzytkownik_tb.Text = element.Uzytkownikid;
+                    uzytkownik_tb.Text = element.Uzytkownicy.Imie + " " + element.Uzytkownicy.Nazwisko;
                 }
             }
         }
@@ -43,6 +43,8 @@ namespace ZgloszeniaAppka
         {
             var pobierz = new PobranieDanych();
             pobierz.UpdateObiektu(_id, tytul_tb.Text, opis_tb.Text);
+
+            
             Close();
 
         }

@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BazaUzytkownicyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BazaUzytkownicyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BazaZgloszenDataSet.cs">
+      <DependentUpon>BazaZgloszenDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BazaZgloszenDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,6 +81,7 @@
     <Compile Include="Szczegoly.Designer.cs">
       <DependentUpon>Szczegoly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uzytkownicy.cs" />
     <Compile Include="Zgloszenia.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -92,6 +101,17 @@
     <EmbeddedResource Include="Szczegoly.resx">
       <DependentUpon>Szczegoly.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BazaUzytkownicyDataSet.xsc">
+      <DependentUpon>BazaUzytkownicyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BazaUzytkownicyDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BazaUzytkownicyDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BazaUzytkownicyDataSet.xss">
+      <DependentUpon>BazaUzytkownicyDataSet.xsd</DependentUpon>
+    </None>
     <None Include="BazaZgloszenDataSet.xsc">
       <DependentUpon>BazaZgloszenDataSet.xsd</DependentUpon>
     </None>

@@ -31,11 +31,12 @@
             this.tytul_btn = new System.Windows.Forms.TextBox();
             this.ok_btn = new System.Windows.Forms.Button();
             this.opis_btn = new System.Windows.Forms.TextBox();
-            this.uzytkownik_btn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.uzytkownik_lb = new System.Windows.Forms.ListBox();
+            this.cb_usery = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tytul_btn
@@ -62,13 +63,6 @@
             this.opis_btn.Name = "opis_btn";
             this.opis_btn.Size = new System.Drawing.Size(175, 74);
             this.opis_btn.TabIndex = 2;
-            // 
-            // uzytkownik_btn
-            // 
-            this.uzytkownik_btn.Location = new System.Drawing.Point(85, 118);
-            this.uzytkownik_btn.Name = "uzytkownik_btn";
-            this.uzytkownik_btn.Size = new System.Drawing.Size(175, 20);
-            this.uzytkownik_btn.TabIndex = 3;
             // 
             // label1
             // 
@@ -105,16 +99,35 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Użytkownik";
             // 
+            // uzytkownik_lb
+            // 
+            this.uzytkownik_lb.FormattingEnabled = true;
+            this.uzytkownik_lb.Location = new System.Drawing.Point(85, 119);
+            this.uzytkownik_lb.Name = "uzytkownik_lb";
+            this.uzytkownik_lb.Size = new System.Drawing.Size(175, 17);
+            this.uzytkownik_lb.TabIndex = 11;
+            this.uzytkownik_lb.SelectedIndexChanged += new System.EventHandler(this.uzytkownik_lb_SelectedIndexChanged);
+            // 
+            // cb_usery
+            // 
+            this.cb_usery.FormattingEnabled = true;
+            this.cb_usery.Location = new System.Drawing.Point(266, 115);
+            this.cb_usery.Name = "cb_usery";
+            this.cb_usery.Size = new System.Drawing.Size(121, 21);
+            this.cb_usery.TabIndex = 12;
+            this.cb_usery.SelectedIndexChanged += new System.EventHandler(this.cb_usery_SelectedIndexChanged);
+            // 
             // Nowe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 151);
+            this.Controls.Add(this.cb_usery);
+            this.Controls.Add(this.uzytkownik_lb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.uzytkownik_btn);
             this.Controls.Add(this.opis_btn);
             this.Controls.Add(this.ok_btn);
             this.Controls.Add(this.tytul_btn);
@@ -130,10 +143,11 @@
         private System.Windows.Forms.TextBox tytul_btn;
         private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.TextBox opis_btn;
-        private System.Windows.Forms.TextBox uzytkownik_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox uzytkownik_lb;
+        private System.Windows.Forms.ComboBox cb_usery;
     }
 }

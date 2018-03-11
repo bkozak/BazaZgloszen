@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.zgloszenia_lb = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.zgloszenieIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tytulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataOtworzeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataZamknieciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.komentarzDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uzytkownikIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zgloszeniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bazaZgloszenDataSet = new ZgloszeniaAppka.BazaZgloszenDataSet();
             this.zgloszeniaTableAdapter = new ZgloszeniaAppka.BazaZgloszenDataSetTableAdapters.ZgloszeniaTableAdapter();
@@ -49,6 +46,13 @@
             this.refresh_btn = new System.Windows.Forms.Button();
             this.zamknij_btn = new System.Windows.Forms.Button();
             this.znajdz_tb = new System.Windows.Forms.TextBox();
+            this.zgloszenieIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tytulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataOtworzeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataZamknieciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.komentarzDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uzytkownikIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zgloszeniaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bazaZgloszenDataSet)).BeginInit();
@@ -66,7 +70,24 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.zgloszenieIDDataGridViewTextBoxColumn,
@@ -77,56 +98,34 @@
             this.komentarzDataGridViewTextBoxColumn,
             this.uzytkownikIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zgloszeniaBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
             this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 331);
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.RoyalBlue;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridView1.Size = new System.Drawing.Size(857, 331);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
-            // 
-            // zgloszenieIDDataGridViewTextBoxColumn
-            // 
-            this.zgloszenieIDDataGridViewTextBoxColumn.DataPropertyName = "ZgloszenieID";
-            this.zgloszenieIDDataGridViewTextBoxColumn.HeaderText = "Numer";
-            this.zgloszenieIDDataGridViewTextBoxColumn.Name = "zgloszenieIDDataGridViewTextBoxColumn";
-            this.zgloszenieIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tytulDataGridViewTextBoxColumn
-            // 
-            this.tytulDataGridViewTextBoxColumn.DataPropertyName = "Tytul";
-            this.tytulDataGridViewTextBoxColumn.HeaderText = "Tytuł";
-            this.tytulDataGridViewTextBoxColumn.Name = "tytulDataGridViewTextBoxColumn";
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            // 
-            // dataOtworzeniaDataGridViewTextBoxColumn
-            // 
-            this.dataOtworzeniaDataGridViewTextBoxColumn.DataPropertyName = "DataOtworzenia";
-            this.dataOtworzeniaDataGridViewTextBoxColumn.HeaderText = "Data Utworzenia";
-            this.dataOtworzeniaDataGridViewTextBoxColumn.Name = "dataOtworzeniaDataGridViewTextBoxColumn";
-            // 
-            // dataZamknieciaDataGridViewTextBoxColumn
-            // 
-            this.dataZamknieciaDataGridViewTextBoxColumn.DataPropertyName = "DataZamkniecia";
-            this.dataZamknieciaDataGridViewTextBoxColumn.HeaderText = "Data Zamkniecia";
-            this.dataZamknieciaDataGridViewTextBoxColumn.Name = "dataZamknieciaDataGridViewTextBoxColumn";
-            // 
-            // komentarzDataGridViewTextBoxColumn
-            // 
-            this.komentarzDataGridViewTextBoxColumn.DataPropertyName = "Komentarz";
-            this.komentarzDataGridViewTextBoxColumn.HeaderText = "Komentarz";
-            this.komentarzDataGridViewTextBoxColumn.Name = "komentarzDataGridViewTextBoxColumn";
-            // 
-            // uzytkownikIDDataGridViewTextBoxColumn
-            // 
-            this.uzytkownikIDDataGridViewTextBoxColumn.DataPropertyName = "UzytkownikID";
-            this.uzytkownikIDDataGridViewTextBoxColumn.HeaderText = "UzytkownikID";
-            this.uzytkownikIDDataGridViewTextBoxColumn.Name = "uzytkownikIDDataGridViewTextBoxColumn";
             // 
             // zgloszeniaBindingSource
             // 
@@ -144,6 +143,11 @@
             // 
             // nowe_btn
             // 
+            this.nowe_btn.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.nowe_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nowe_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.nowe_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nowe_btn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nowe_btn.Location = new System.Drawing.Point(12, 380);
             this.nowe_btn.Name = "nowe_btn";
             this.nowe_btn.Size = new System.Drawing.Size(114, 23);
@@ -154,6 +158,10 @@
             // 
             // zamkniete_btn
             // 
+            this.zamkniete_btn.FlatAppearance.BorderSize = 0;
+            this.zamkniete_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.zamkniete_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.zamkniete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zamkniete_btn.Location = new System.Drawing.Point(132, 380);
             this.zamkniete_btn.Name = "zamkniete_btn";
             this.zamkniete_btn.Size = new System.Drawing.Size(122, 23);
@@ -164,6 +172,10 @@
             // 
             // aktualne_btn
             // 
+            this.aktualne_btn.FlatAppearance.BorderSize = 0;
+            this.aktualne_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.aktualne_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.aktualne_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aktualne_btn.Location = new System.Drawing.Point(260, 380);
             this.aktualne_btn.Name = "aktualne_btn";
             this.aktualne_btn.Size = new System.Drawing.Size(111, 23);
@@ -174,6 +186,10 @@
             // 
             // wszystkie_btn
             // 
+            this.wszystkie_btn.FlatAppearance.BorderSize = 0;
+            this.wszystkie_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.wszystkie_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.wszystkie_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wszystkie_btn.Location = new System.Drawing.Point(378, 381);
             this.wszystkie_btn.Name = "wszystkie_btn";
             this.wszystkie_btn.Size = new System.Drawing.Size(84, 23);
@@ -220,11 +236,60 @@
             this.znajdz_tb.TabIndex = 9;
             this.znajdz_tb.TextChanged += new System.EventHandler(this.znajdz_tb_TextChanged);
             // 
+            // zgloszenieIDDataGridViewTextBoxColumn
+            // 
+            this.zgloszenieIDDataGridViewTextBoxColumn.DataPropertyName = "ZgloszenieID";
+            this.zgloszenieIDDataGridViewTextBoxColumn.HeaderText = "Numer";
+            this.zgloszenieIDDataGridViewTextBoxColumn.Name = "zgloszenieIDDataGridViewTextBoxColumn";
+            this.zgloszenieIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zgloszenieIDDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tytulDataGridViewTextBoxColumn
+            // 
+            this.tytulDataGridViewTextBoxColumn.DataPropertyName = "Tytul";
+            this.tytulDataGridViewTextBoxColumn.HeaderText = "Tytuł";
+            this.tytulDataGridViewTextBoxColumn.Name = "tytulDataGridViewTextBoxColumn";
+            this.tytulDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            this.opisDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dataOtworzeniaDataGridViewTextBoxColumn
+            // 
+            this.dataOtworzeniaDataGridViewTextBoxColumn.DataPropertyName = "DataOtworzenia";
+            this.dataOtworzeniaDataGridViewTextBoxColumn.HeaderText = "Data Utworzenia";
+            this.dataOtworzeniaDataGridViewTextBoxColumn.Name = "dataOtworzeniaDataGridViewTextBoxColumn";
+            this.dataOtworzeniaDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // dataZamknieciaDataGridViewTextBoxColumn
+            // 
+            this.dataZamknieciaDataGridViewTextBoxColumn.DataPropertyName = "DataZamkniecia";
+            this.dataZamknieciaDataGridViewTextBoxColumn.HeaderText = "Data Zamkniecia";
+            this.dataZamknieciaDataGridViewTextBoxColumn.Name = "dataZamknieciaDataGridViewTextBoxColumn";
+            this.dataZamknieciaDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // komentarzDataGridViewTextBoxColumn
+            // 
+            this.komentarzDataGridViewTextBoxColumn.DataPropertyName = "Komentarz";
+            this.komentarzDataGridViewTextBoxColumn.HeaderText = "Komentarz";
+            this.komentarzDataGridViewTextBoxColumn.Name = "komentarzDataGridViewTextBoxColumn";
+            // 
+            // uzytkownikIDDataGridViewTextBoxColumn
+            // 
+            this.uzytkownikIDDataGridViewTextBoxColumn.DataPropertyName = "UzytkownikID";
+            this.uzytkownikIDDataGridViewTextBoxColumn.HeaderText = "UzytkownikID";
+            this.uzytkownikIDDataGridViewTextBoxColumn.Name = "uzytkownikIDDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 447);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(881, 411);
             this.Controls.Add(this.znajdz_tb);
             this.Controls.Add(this.zamknij_btn);
             this.Controls.Add(this.refresh_btn);
@@ -235,6 +300,7 @@
             this.Controls.Add(this.nowe_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.zgloszenia_lb);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -260,6 +326,7 @@
         private System.Windows.Forms.Button usun_btn;
         private System.Windows.Forms.Button refresh_btn;
         private System.Windows.Forms.Button zamknij_btn;
+        private System.Windows.Forms.TextBox znajdz_tb;
         private System.Windows.Forms.DataGridViewTextBoxColumn zgloszenieIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tytulDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
@@ -267,7 +334,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataZamknieciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn komentarzDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uzytkownikIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox znajdz_tb;
     }
 }
 

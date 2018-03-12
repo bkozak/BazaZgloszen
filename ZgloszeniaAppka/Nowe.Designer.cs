@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.uzytkownik_lb = new System.Windows.Forms.ListBox();
             this.cb_usery = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -99,21 +98,12 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Użytkownik";
             // 
-            // uzytkownik_lb
-            // 
-            this.uzytkownik_lb.FormattingEnabled = true;
-            this.uzytkownik_lb.Location = new System.Drawing.Point(85, 119);
-            this.uzytkownik_lb.Name = "uzytkownik_lb";
-            this.uzytkownik_lb.Size = new System.Drawing.Size(175, 17);
-            this.uzytkownik_lb.TabIndex = 11;
-            this.uzytkownik_lb.SelectedIndexChanged += new System.EventHandler(this.uzytkownik_lb_SelectedIndexChanged);
-            // 
             // cb_usery
             // 
             this.cb_usery.FormattingEnabled = true;
-            this.cb_usery.Location = new System.Drawing.Point(266, 115);
+            this.cb_usery.Location = new System.Drawing.Point(85, 118);
             this.cb_usery.Name = "cb_usery";
-            this.cb_usery.Size = new System.Drawing.Size(121, 21);
+            this.cb_usery.Size = new System.Drawing.Size(175, 21);
             this.cb_usery.TabIndex = 12;
             this.cb_usery.SelectedIndexChanged += new System.EventHandler(this.cb_usery_SelectedIndexChanged);
             // 
@@ -123,7 +113,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 151);
             this.Controls.Add(this.cb_usery);
-            this.Controls.Add(this.uzytkownik_lb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -147,7 +136,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox uzytkownik_lb;
         private System.Windows.Forms.ComboBox cb_usery;
     }
 }

@@ -20,28 +20,33 @@ namespace ZgloszeniaAppka
         int _id = 0;
         SqlDataAdapter _adapt;
         DataTable _dt;
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
         public Form1()
         {
             InitializeComponent();
-            
-            
         }
 
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        private static extern bool ReleaseCapture();
+
+        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bazaZgloszenDataSet.Zgloszenia' table. You can move, or remove it, as needed.
-            //zgloszeniaTableAdapter.Fill(this.bazaZgloszenDataSet.Zgloszenia);     
             var pobierz = new PobranieDanych();
             pobierz.PobieranieWszystkiegoUzytkownicy();
             pobierz.PobieranieWszystkiego();
             dataGridView1.DataSource = PobranieDanych.Lista;
             UstawienieDataGrida();
-
-            //BindingSource bs = new BindingSource();
-            //bs.DataSource = typeof(Zgloszenia);
-            //dataGridView1.DataSource = bs;
-            //dataGridView1.AutoGenerateColumns = true;
-
 
         }
 
@@ -50,6 +55,7 @@ namespace ZgloszeniaAppka
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns["UzytkownikImie"].HeaderText = "Użytkownik";
         }
 
         private void znajdz_tb_TextChanged(object sender, EventArgs e)
@@ -236,8 +242,8 @@ namespace ZgloszeniaAppka
 
         private void wszystkie_btn_Click(object sender, EventArgs e)
         {
-            this.dataGridView1.Columns[4].Visible = true;
             dataGridView1.DataSource = PobranieDanych.Lista;
+            
         }
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -258,5 +264,7 @@ namespace ZgloszeniaAppka
             MessageBox.Show(e.ToString());
 
         }
+
+        private void button1_Click(object sender, EventArgs e) => Close();
     }
 }

@@ -23,14 +23,11 @@ namespace ZgloszeniaAppka
             var pobranieUserow = new PobranieDanych();
             pobranieUserow.PobieranieWszystkiegoUzytkownicy();
 
-            uzytkownik_lb.DataSource = PobranieDanych.listaUzytkownikow;
-            uzytkownik_lb.DisplayMember = "ImieNazwisko";
+            //uzytkownik_lb.DataSource = PobranieDanych.listaUzytkownikow;
+            //uzytkownik_lb.DisplayMember = "ImieNazwisko";
 
             cb_usery.DataSource = PobranieDanych.listaUzytkownikow;
             cb_usery.DisplayMember = "ImieNazwisko";
-
-            
-            
         }
 
         private void ok_btn_Click(object sender, EventArgs e)
@@ -66,7 +63,6 @@ namespace ZgloszeniaAppka
 
         private void cb_usery_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             //var index = PobranieDanych.listaUzytkownikow.FindIndex(u => u.ImieNazwisko == cb_usery.SelectedItem);
             if (cb_usery.SelectedIndex >= 1)
                 idU = PobranieDanych.listaUzytkownikow[cb_usery.SelectedIndex].UzytkownikID;

@@ -19,10 +19,6 @@ namespace ZgloszeniaAppka
 
         public void PobieranieWszystkiego()
         {
-
-            //var index = listaUzytkownikow.FindIndex(c => c.UzytkownikID == 2);
-            //var obiekt = listaUzytkownikow[index];
-
             using (var conn = new SqlConnection(ConfigurationManager
                 .ConnectionStrings["ZgloszeniaAppka.Properties.Settings.BazaZgloszenConnectionString"]
                 .ConnectionString))
@@ -49,12 +45,10 @@ namespace ZgloszeniaAppka
                                 Uzytkownicy = listaUzytkownikow[listaUzytkownikow.FindIndex(c => c.UzytkownikID == (int)reader[6])]
                                 
                             };
-                            
                             Lista.Add(zgloszonko);
                         }
                     }
                 }
-
                 conn.Close();
             }
         }
@@ -62,7 +56,7 @@ namespace ZgloszeniaAppka
         public string WyszukajUsera(int id)
         {
             var ind = listaUzytkownikow.FindIndex(u => u.UzytkownikID == id);
-            return listaUzytkownikow[ind].Imie;
+            return listaUzytkownikow[ind].Imie + " " + listaUzytkownikow[ind].Nazwisko;
         }
 
         public void PobieranieWszystkiegoUzytkownicy()

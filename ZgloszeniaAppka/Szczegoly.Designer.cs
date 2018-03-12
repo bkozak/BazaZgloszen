@@ -43,6 +43,8 @@
             this.dodajzalacznik_btn = new System.Windows.Forms.Button();
             this.faktura_btn = new System.Windows.Forms.Button();
             this.zaplacone_cb = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_firma = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tytul_tb
@@ -80,15 +82,15 @@
             // 
             // datautworzenia_tb
             // 
-            this.datautworzenia_tb.Location = new System.Drawing.Point(402, 71);
+            this.datautworzenia_tb.Location = new System.Drawing.Point(402, 105);
             this.datautworzenia_tb.Name = "datautworzenia_tb";
-            this.datautworzenia_tb.Size = new System.Drawing.Size(154, 20);
+            this.datautworzenia_tb.Size = new System.Drawing.Size(155, 20);
             this.datautworzenia_tb.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(402, 55);
+            this.label3.Location = new System.Drawing.Point(402, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 5;
@@ -96,15 +98,15 @@
             // 
             // datazamkniecia_tb
             // 
-            this.datazamkniecia_tb.Location = new System.Drawing.Point(401, 115);
+            this.datazamkniecia_tb.Location = new System.Drawing.Point(401, 149);
             this.datazamkniecia_tb.Name = "datazamkniecia_tb";
-            this.datazamkniecia_tb.Size = new System.Drawing.Size(155, 20);
+            this.datazamkniecia_tb.Size = new System.Drawing.Size(156, 20);
             this.datazamkniecia_tb.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(402, 98);
+            this.label4.Location = new System.Drawing.Point(402, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 7;
@@ -166,18 +168,36 @@
             // zaplacone_cb
             // 
             this.zaplacone_cb.AutoSize = true;
-            this.zaplacone_cb.Location = new System.Drawing.Point(401, 141);
+            this.zaplacone_cb.Location = new System.Drawing.Point(401, 175);
             this.zaplacone_cb.Name = "zaplacone_cb";
             this.zaplacone_cb.Size = new System.Drawing.Size(79, 17);
             this.zaplacone_cb.TabIndex = 15;
             this.zaplacone_cb.Text = "Zapłacone";
             this.zaplacone_cb.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(402, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Firma";
+            // 
+            // tb_firma
+            // 
+            this.tb_firma.Location = new System.Drawing.Point(402, 66);
+            this.tb_firma.Name = "tb_firma";
+            this.tb_firma.Size = new System.Drawing.Size(156, 20);
+            this.tb_firma.TabIndex = 17;
+            // 
             // Szczegoly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 315);
+            this.Controls.Add(this.tb_firma);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.zaplacone_cb);
             this.Controls.Add(this.faktura_btn);
             this.Controls.Add(this.dodajzalacznik_btn);
@@ -193,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.opis_tb);
             this.Controls.Add(this.tytul_tb);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Szczegoly";
             this.Text = "Szczegoly";
             this.ResumeLayout(false);
@@ -217,5 +238,7 @@
         private System.Windows.Forms.Button dodajzalacznik_btn;
         private System.Windows.Forms.Button faktura_btn;
         private System.Windows.Forms.CheckBox zaplacone_cb;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_firma;
     }
 }
